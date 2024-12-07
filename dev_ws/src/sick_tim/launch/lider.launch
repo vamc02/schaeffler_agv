@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- LiDAR 2 -->
+  <group ns="lidar2">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find sick_tim)/urdf/example.urdf.xacro" />
+
+    <node name="robot_state_publisher_2" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <node name="lidar_node_2" pkg="sick_tim" type="sick_tim551_2050001" respawn="false">
+      <param name="frame_id" type="string" value="laser" />
+      <param name="min_ang" type="double" value="-2.35619449019" />
+      <param name="max_ang" type="double" value="2.35619449019" />
+      <param name="intensity" type="bool" value="false" />
+      <param name="time_offset" type="double" value="-0.001" />
+     <!--<param name="publish_datagram" type="bool" value="false" />
+      <param name="subscribe_datagram" type="bool" value="false" />
+      <param name="device_number" type="int" value="0" /> -->
+      <param name="time_increment" type="double" value="0.000185185" />
+      <param name="range_min" type="double" value="0.05" />
+      <param name="range_max" type="double" value="10.0" />
+      <param name="hostname" type="string" value="192.168.0.81" />
+      <param name="port" type="string" value="2111" />
+      <param name="timelimit" type="int" value="5" />
+      <remap from="/scan" to="/scan_back" />
+    </node>
+  </group>
+
+  <!-- LiDAR 1 -->
+  <group ns="lidar1">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find sick_tim)/urdf/example.urdf.xacro" />
+
+    <node name="robot_state_publisher_1" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <node name="lidar_node_1" pkg="sick_tim" type="sick_tim551_2050001" respawn="false">
+      <param name="frame_id" type="string" value="laser" />
+      <param name="min_ang" type="double" value="-2.35619449019" />
+      <param name="max_ang" type="double" value="2.35619449019" />
+      <param name="intensity" type="bool" value="false" />
+      <param name="time_offset" type="double" value="0.001" />
+      <!--<param name="publish_datagram" type="bool" value="false" />
+      <param name="subscribe_datagram" type="bool" value="false" />
+      <param name="device_number" type="int" value="1" />-->
+      <param name="time_increment" type="double" value="0.000185185" />
+      <param name="range_min" type="double" value="0.05" />
+      <param name="range_max" type="double" value="10.0" />
+      <param name="hostname" type="string" value="192.168.0.80" />
+      <param name="port" type="string" value="2111" />
+      <param name="timelimit" type="int" value="5" />
+      <remap from="/scan" to="/scan_front" />
+    </node>
+  </group>
+</launch>
+
