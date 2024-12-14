@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="sick_tim310" params="name ros_topic min_angle:=-2.357 max_angle:=2.357 min_range:=0.05 max_range:=4.0">
+  <xacro:macro name="sick_tim310" params="name ros_topic min_angle:=-2.357 max_angle:=2.357 min_range:=0.05 max_range:=10.0">
     <xacro:sick_tim name="${name}" ros_topic="${ros_topic}"
       length="0.06" width="0.06" height="0.079" mass="0.150" z_offset="0.05595"
       min_angle="${min_angle}" max_angle="${max_angle}"

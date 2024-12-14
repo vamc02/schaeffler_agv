@@ -1,0 +1,12 @@
+gazebo
+
+roslaunch gazebo_ros empty_world.launch
+rosrun gazebo_ros spawn_model -param robot_description -urdf -model my_robot -x 0 -y 0 -z 0
+
+lidar
+
+roslaunch sick_tim lider.launch
+
+urdf
+
+roslaunch schaeffler_robot_urdf corrected_urdf.launch sim_time:=true

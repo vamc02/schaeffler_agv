@@ -18,6 +18,11 @@
     <material name="black">
         <color rgba="0 0 0 1" />
     </material>
+	
+    <material name="red">
+        <color rgba="1 0 0 1" />
+    </material>
+
 
     <!-- BASE LINK -->
 
@@ -42,7 +47,7 @@
             <material name="white" />
         </visual>
         <collision>
-            <origin xyz="0.5 0 0" />
+            <origin xyz="0.5 0 0.1" />
             <geometry>
                 <box size="1 0.7 0.2" />
             </geometry>
@@ -51,6 +56,11 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
         </xacro:inertial_box>
     </link>
+
+
+    <gazebo reference="chassis">
+	<material>Gazebo/white</material>
+    </gazebo>
 
     <!-- LEFT WHEEL LINK -->
 
@@ -78,6 +88,10 @@
         </xacro:inertial_cylinder>
     </link>
 
+    <gazebo reference="left_wheel">
+	<material>Gazebo/blue</material>
+    </gazebo>
+
     <!-- RIGHT WHEEL LINK -->
 
     <joint name="right_wheel_joint" type="continuous">
@@ -103,6 +117,10 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
         </xacro:inertial_cylinder>
     </link>
+
+    <gazebo reference="right_wheel">
+	<material>Gazebo/blue</material>
+    </gazebo>
 
 
     <!-- CASTER WHEEL LINKS -->
@@ -132,6 +150,10 @@
         </xacro:inertial_sphere>
     </link>
 
+    <gazebo reference="caster_wheel_fl">
+	<material>Gazebo/black</material>
+    </gazebo>
+
  <!-- caster_wheel_joint_fr LINK -->
 
     <joint name="caster_wheel_joint_fr" type="fixed">
@@ -156,6 +178,10 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
         </xacro:inertial_sphere>
     </link>
+
+    <gazebo reference="caster_wheel_fr">
+	<material>Gazebo/black</material>
+    </gazebo>
 
  <!-- caster_wheel_joint_bl LINK -->
 
@@ -182,6 +208,10 @@
         </xacro:inertial_sphere>
     </link>
 
+    <gazebo reference="caster_wheel_bl">
+	<material>Gazebo/black</material>
+    </gazebo>
+
  <!-- caster_wheel_joint_br LINK -->
 
     <joint name="caster_wheel_joint_br" type="fixed">
@@ -206,5 +236,9 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
         </xacro:inertial_sphere>
     </link>
+
+    <gazebo reference="caster_wheel_br">
+	<material>Gazebo/black</material>
+    </gazebo>
 
 </robot>
