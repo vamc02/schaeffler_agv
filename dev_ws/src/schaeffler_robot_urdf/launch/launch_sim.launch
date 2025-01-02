@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Include the robot_state_publisher launch file -->
+    <include file="$(find schaeffler_robot_urdf)/launch/corrected_urdf.launch">
+       <arg name="use_sim_time" value="true"/>
+    </include>
+
+    <!-- Include the Gazebo launch file -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    </include>
+
+    <!-- Spawn the robot entity -->
+    <!--<node name="spawn_entity" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-param robot_description -entity my_bot" /> -->
+</launch>

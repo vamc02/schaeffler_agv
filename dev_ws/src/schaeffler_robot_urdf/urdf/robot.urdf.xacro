@@ -3,6 +3,6 @@
 
     <xacro:include filename="corrected_robot_core.xacro"/>
     <xacro:include filename="lidar.xacro"/>
-    <xacro:include filename="gazebo_control.xarco"/>
+    <xacro:include filename="gazebo_control(1).xarco"/>
 
 </robot>
