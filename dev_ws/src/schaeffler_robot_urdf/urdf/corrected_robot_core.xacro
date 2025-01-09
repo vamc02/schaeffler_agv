@@ -152,8 +152,8 @@
 
     <gazebo reference="caster_wheel_fl">
 	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+    	<mu1 value="0.001"></mu1>
+    	<mu2 value="0.001"></mu2>
     </gazebo>
 
  <!-- caster_wheel_joint_fr LINK -->
@@ -183,8 +183,8 @@
 
     <gazebo reference="caster_wheel_fr">
 	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+    	<mu1 value="0.001"></mu1>
+    	<mu2 value="0.001"></mu2>
     </gazebo>
 
  <!-- caster_wheel_joint_bl LINK -->
@@ -214,8 +214,8 @@
 
     <gazebo reference="caster_wheel_bl">
 	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+    	<mu1 value="0.001"></mu1>
+    	<mu2 value="0.001"></mu2>
     </gazebo>
 
  <!-- caster_wheel_joint_br LINK -->
@@ -245,8 +245,8 @@
 
     <gazebo reference="caster_wheel_br">
 	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+    	<mu1 value="0.001"></mu1>
+    	<mu2 value="0.001"></mu2>
     </gazebo>
 
 </robot>
